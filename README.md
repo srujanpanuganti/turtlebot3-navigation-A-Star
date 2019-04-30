@@ -47,10 +47,3 @@ rosrun [package-name] publisher.py
 The sample command is given as below. In my case the name of the package that I have created is planning. 
 rosrun planning publisher.py
 
-
-Additional attachments:
-the path generated from the A* algorithm has been attached path.png in the codes folder
-the simulation videos have been attached with the name turtlebot1.mp4 and turtlebot2.mp4
-turtlebot1.mp4 is a longer video whereas turtlebot2.mp4 is a shorter video for a smaller distance 
-
-As the turtlebot is moving relatively slowly, it took more than 30 seconds to reach the goal.
