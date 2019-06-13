@@ -39,9 +39,6 @@ def new_position_integration(current_x,current_y,current_theta,length,radius,vel
 
     for i in range(int(integration_step)):
         cur_x , cur_y, cur_theta, cur_cost= calculate_values(cur_x,cur_y,cur_theta,len,rad,u_left,u_right,new_time_step)
-        # cur_x = temp_x + cur_x
-        # cur_y = temp_y + cur_y
-        # cur_theta = temp_theta + cur_theta
         new_cost = cur_cost + new_cost
 
     return cur_x,cur_y,cur_theta,new_cost
