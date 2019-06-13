@@ -1,8 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-
 def is_point_in_rect(points,rect_coordinates):        # points = [0,0]    ## rect1 = [[1,4],[4,2]]
     x = points[0]
     y = points[1]
@@ -99,11 +97,10 @@ def obstacle_set_create():
                 obstacle_list.append(point)
 
     return obs_set,obstacle_list
-# obtained_set = obstacle_set_create(rectangles,circles)
 
+# obtained_set = obstacle_set_create(rectangles,circles)
 def is_obstacle_set(point,obst_set):
     return str(point) in obst_set
-# stat3 = is_obstacle_set()
 
 def is_obstacle(point):
 
@@ -118,7 +115,6 @@ def is_obstacle(point):
         return True
     else:
         return False
-
 
 clearance = 0.05
 res = 10
@@ -176,9 +172,6 @@ right_semi_radius = 0.7995* res
 c1 = cir_offset(np.multiply([3.9,9.6], res))
 c1_rad = 0.405* res + robot_radius
 
-# print(c1)
-# print(cir_offset(c1))
-
 c2 = cir_offset(np.multiply([4.38,7.36], res))
 c2_rad = 0.405* res + robot_radius
 
@@ -194,7 +187,6 @@ c5_rad = 0.7995* res + robot_radius
 c6 = cir_offset(np.multiply([3.0985,8.3005], res))
 c6_rad = 0.7995* res + robot_radius
 
-# grid = [x,y]
 grid = np.multiply([11.1,10.1], res)
 
 rectangles = [rect1,rect2,rect3,rect4,rect5,rect6,rect7,rect8,rect9,rect10,rect11,rect12,rect13,rect14]
@@ -203,13 +195,3 @@ circles = [[c1,c1_rad],[c2,c2_rad],[c3,c3_rad],[c4,c4_rad],[c5,c5_rad],[c6,c6_ra
 ob_set, ob_list  = obstacle_set_create()
 
 ob_array = np.asarray(ob_list)
-
-# plt.plot(ob_array[:,0],ob_array[:,1], 'b+')
-# plt.show()
-# stat = is_obstacle([3.0985,8.3005])
-# print(ob_list)
-
-# plt.plot(ob_array[:,0],ob_array[:,1],'b+')
-# plt.show()
-
-
