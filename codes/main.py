@@ -43,9 +43,6 @@ parser.add_argument('goal_position')
 args = parser.parse_args()
 start_position, goal_position = read(args.start_position,args.goal_position)
 
-# print('s',start_position)
-# print('g',goal_position)
-
 ## to check if the node is visited
 def is_visited_check(node, node_check_set):
     return str(node) in node_check_set
@@ -67,8 +64,6 @@ def node_info_list(min_x,min_y,max_x,max_y):
         distance[str(node)] = 9999999#math.inf
     #print(distance[str([5,5])])
     return distance
-
-
 
 ## To check if the entered start and goal position are in the obstacle space or not
 def valid_start_goal(start,goal):
@@ -220,7 +215,6 @@ while not q.empty() and is_a_vaid_input == True:# and :
                 cost = action_cost + node_info_dict[str([int(action_pos[0]),int(action_pos[1])])] + cost_to_go(action_pos,goal_position)
                 node_info_dict[str([int(action_pos[0]),int(action_pos[1])])] = cost
                 q.put([cost,[action[0],action[1],action_theta]])
-                # node_info_parent_dict[str([int(action_pos[0]),int(action_pos[1])])] = [int(node_pos[0]),int(node_pos[1])] #--> parent is updated to the node info
                 node_info_parent_dict[str(action_pos)] = node_pos#--> parent is updated to the node info
                 node_info_velocities[str(action_pos)] = action_velocities
 
@@ -230,13 +224,10 @@ while not q.empty() and is_a_vaid_input == True:# and :
                 temp = action_cost + node_info_dict[str(node_pos)]
                 if node_info_dict[str(action_pos)] > temp:
                     node_info_dict[str(action_pos)] = temp + cost_to_go(action_pos,goal_position)
-                    # node_info_parent_dict[str([int(action_pos[0]),int(action_pos[1])])] = [int(node_pos[0]),int(node_pos[1])]           #--> parent is updated to the node info
                     node_info_parent_dict[str(action_pos)] = node_pos           #--> parent is updated to the node info
                     node_info_velocities[str(action_pos)] = action_velocities
 
 node_path = []
-# print(node_info_dict)
-# print(node_info_velocities)
 node_velocities_list = []
 
 if is_a_vaid_input == True:
@@ -271,9 +262,6 @@ with open('node_path.txt', 'w') as node_path_file:
         np.savetxt(node_path_file,t,delimiter='\t')
 
 velocity_list = []
-
-
-
 for velocity in node_vel_arr:
     # print(velocity[0],velocity[1])
 
