@@ -64,4 +64,11 @@ The results are located in the `output/`
 
 ## See how it works
 
+<p align="center">
+<img src="images/output.gif" alt="output" width="640">
+</p>
+<p align="center">
+<em>TurtleBot 2 Simulated in Gazebo</em>
+</p>
+
 
