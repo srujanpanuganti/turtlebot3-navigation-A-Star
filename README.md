@@ -17,7 +17,9 @@ The Following Map is used to plan the path
 ## Dependencies
 following packages have to be imported for running this file 
 
-* python 3.5 and above
+* python 3.5 or above
+* Gazebo 7 or above
+* ROS Kinetic
 * numpy
 * math
 * queue
