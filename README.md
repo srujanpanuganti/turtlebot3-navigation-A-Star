@@ -16,12 +16,13 @@ The Following Map is used to plan the path
 
 ## Dependencies
 following packages have to be imported for running this file 
-python 3.5 and above
-numpy
-math
-queue
-argparse
-matplotlib.pyplot
+
+* python 3.5 and above
+* numpy
+* math
+* queue
+* argparse
+* matplotlib.pyplot
 
 ## Execution
 The code is divided into four parts
