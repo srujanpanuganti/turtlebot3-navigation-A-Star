@@ -2,7 +2,17 @@
 
 * This Project Implements A* Path Planning Algorithm for a differential drive robot.
 * This Project is also simulated on Turtlebot 2 using ROS Gazebo
-* The Project is implemented on real Turtlebot3 Robot at Robot Realization Laboratoy, University of Maryland, College Park
+* The Project is implemented on real Turtlebot3 Robot at Robot Realization Laboratoy(RRL), University of Maryland, College Park
+
+## Map of the environment 
+The Following Map is used to plan the path
+
+<p align="center">
+<img src="images/rrl_map.JPG" alt="map" width="480">
+</p>
+<p align="center">
+<em>Map of RRL Lab</em>
+</p>
 
 ## Dependencies
 following packages have to be imported for running this file 
