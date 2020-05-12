@@ -35,11 +35,11 @@ The code is divided into four parts
 
 `publisher.py`
 
-The `main.py` imports the `action_set_offset.py` and `obstacle_space_offset.py` while it is being executed. The input for executing this needs to be given as following
+* The `main.py` imports the `action_set_offset.py` and `obstacle_space_offset.py` while it is being executed. The input for executing this needs to be given as following
 
 `python main.py [start_position] [goal_position]`
 
-The sample imput for running `main.py` are given as below 
+* The sample imput for running `main.py` are given as below 
 
 `python main.py 1,2 10,10`
 
